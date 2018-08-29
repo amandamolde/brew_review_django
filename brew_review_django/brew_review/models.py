@@ -7,7 +7,7 @@ class Brewery(models.Model):
     city = models.CharField(max_length=255)
     state = models.CharField(max_length=2)
     description = models.TextField()
-    website_url = models.TextField()
+    website_url = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
@@ -18,7 +18,7 @@ class Review(models.Model):
     beer_tenders = models.PositiveIntegerField()
     beer_selection = models.PositiveIntegerField()
     notes = models.TextField()
-    photo = models.ImageField(upload_to='images')
+    photo = models.ImageField(upload_to='images', blank=True)
 
     def __str__(self):
         return self.notes
