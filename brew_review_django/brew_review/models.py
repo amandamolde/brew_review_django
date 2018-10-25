@@ -6,7 +6,7 @@ class Brewery(models.Model):
     name = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
     state = models.CharField(max_length=2)
-    description = models.TextField()
+    description = models.TextField(blank=True)
     website_url = models.TextField(blank=True)
 
     def __str__(self):
