@@ -18,7 +18,7 @@ class Review(models.Model):
     beer_tenders = models.PositiveIntegerField()
     beer_selection = models.PositiveIntegerField()
     notes = models.TextField(blank=True)
-    photo = models.ImageField(upload_to='images', blank=True)
+    photo = models.ImageField(upload_to='images', null=True)
 
     def __str__(self):
         return self.notes
