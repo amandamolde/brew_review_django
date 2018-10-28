@@ -8,6 +8,7 @@ class Brewery(models.Model):
     state = models.CharField(max_length=2)
     description = models.TextField(blank=True)
     website_url = models.TextField(blank=True)
+    photo_url = models.TextField(default="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180")
 
     def __str__(self):
         return self.name
